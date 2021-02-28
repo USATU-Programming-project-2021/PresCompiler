@@ -6,7 +6,8 @@ pub mod slides_parser {
         SerializationError,
         SyntaxError,
     }
-
+    
+    #[derive(PartialEq, Debug)]
     pub struct Slide {
         pub title: Option<String>,
         pub sub_titile: Option<String>,
@@ -78,16 +79,6 @@ pub mod slides_parser {
 
     pub fn is_slide_valid(slide: &Slide) -> bool {
         true
-    }
-
-    pub fn pre_parse_slide(yaml_slide: String) -> Result<Value, serde_yaml::Error> {
-        serde_yaml::from_str(&yaml_slide[..])
-    }
-
-    pub fn parse_slide(yaml_slide: String) -> Result<Slide, ParseError> {
-        let slide = Slide::new();
-
-        unimplemented!();
     }
 }
 
