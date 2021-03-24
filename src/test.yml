@@ -1,0 +1,18 @@
+
+pres:
+  theme: gruvbox
+
+  slides:
+    - slide:
+        title: Hello
+        subtitle: adssdas
+        plain_text: ./kek
+    - slide:
+        title: Hello))
+        subtitle: kekekekek
+        plain_text: .///////
+    - slide:
+        title: Hello))
+        subtitle: kekekekek
+        plain_text: .///////
+
