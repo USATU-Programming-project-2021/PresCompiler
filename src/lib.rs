@@ -4,3 +4,8 @@ pub mod analyzer{
     pub mod presentation; 
 }
 
+
+pub mod validators{
+    pub mod slide;
+    pub mod presentation; 
+}

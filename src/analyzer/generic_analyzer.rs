@@ -1,13 +1,5 @@
-use std::collections::HashMap;
 use serde_yaml::Error;
-use serde_yaml::Value;
-use serde::{Serialize, Deserialize};
 use serde::de::DeserializeOwned;
-
-pub struct YmlRepr {
-         
-}
-
 
 #[derive(Debug, PartialEq)]
 pub enum AnalysisErr {
@@ -33,6 +25,4 @@ pub trait YmlAnalyzer {
             Err(err) => Err(AnalysisErr::LogicErr(err.to_string()))
         }
     }
-    fn is_valid<'a>(&self) -> Result<&'a Value, AnalysisErr>;
-    fn get_data(&self) -> Self;
 }

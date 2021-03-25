@@ -1,28 +1,15 @@
-use super::generic_analyzer::{YmlAnalyzer, AnalysisErr};
-use super::slide::{SlideYml};
-use serde_yaml::Error;
-use serde_yaml::Value;
-use serde::{Serialize, Deserialize};
-
+use super::generic_analyzer::YmlAnalyzer;
+use super::slide::SlideYml;
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub struct PresYml{
-    pub pres: PresYmlData
+pub struct PresYml {
+    pub pres: PresYmlData,
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub struct PresYmlData{
+pub struct PresYmlData {
     pub theme: Option<String>,
-    pub slides: Vec<SlideYml>
+    pub slides: Vec<SlideYml>,
 }
-
-impl YmlAnalyzer for PresYml{
-
-    fn is_valid<'a>(&self) -> Result<&'a Value, AnalysisErr>{
-        unimplemented!();
-    }
-
-    fn get_data(&self) -> Self{
-        unimplemented!();
-    }
-}
+impl YmlAnalyzer for PresYml {}
