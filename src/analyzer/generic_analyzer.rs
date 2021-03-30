@@ -5,13 +5,15 @@ use serde::de::DeserializeOwned;
 pub enum AnalysisErr {
     SyntaxErr(String),
     LogicErr(String),
+    OsErr(String)
 }
 
 impl ToString for AnalysisErr{
     fn to_string(&self) -> String{
         match self{
             AnalysisErr::LogicErr(err) => err.clone(),
-            AnalysisErr::SyntaxErr(err) => err.clone()
+            AnalysisErr::SyntaxErr(err) => err.clone(),
+            AnalysisErr::OsErr(err) => err.clone()
         }
     }
 }
